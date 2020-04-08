@@ -2,7 +2,7 @@ package com.bayzat.controller;
 
 import com.bayzat.BagsResponse;
 import com.bayzat.exception.ApiException;
-import com.bayzat.model.BallsRequest;
+import com.bayzat.model.BagsRequest;
 import com.bayzat.service.BagService;
 import com.bayzat.utility.ApiConstants;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +34,7 @@ public class BagsController {
 
 
     @PostMapping(ApiConstants.CALCULATE)
-    public ResponseEntity<BagsResponse> calculateTotalNumbers(@Valid @RequestBody BallsRequest ballsRequest)
+    public ResponseEntity<BagsResponse> calculateTotalNumbers(@Valid @RequestBody BagsRequest ballsRequest)
             throws ApiException {
         return ok(bagService.calculateTotalNumbers(ballsRequest.getBalls()));
     }

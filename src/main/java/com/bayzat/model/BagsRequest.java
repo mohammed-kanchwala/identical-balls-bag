@@ -7,7 +7,7 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 @Data
-public class BallsRequest {
+public class BagsRequest {
 
     @NotNull
     @Min(value = 1, message = "The number of balls should be minimum 1")
