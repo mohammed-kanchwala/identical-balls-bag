@@ -70,4 +70,14 @@ public class BagsControllerTests {
                 baseUrl + ApiConstants.CALCULATE, request, BagsResponse.class);
         assertNull(response.getTotalNoOfWays());
     }
+
+    @Test
+    @DisplayName("Test to check the total Number of Ways for Bag with 0 Balls")
+    public void calculateNumbers_ForMoreThan10Balls() {
+        BagsRequest request = new BagsRequest();
+        request.setBalls(20);
+        BagsResponse response = restTemplate.postForObject(
+                baseUrl + ApiConstants.CALCULATE, request, BagsResponse.class);
+        assertNull(response.getTotalNoOfWays());
+    }
 }

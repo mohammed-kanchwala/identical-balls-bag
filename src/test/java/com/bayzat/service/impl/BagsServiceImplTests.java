@@ -29,5 +29,4 @@ public class BagsServiceImplTests {
         BagsResponse response = bagService.calculateTotalNumbers(5);
         assertEquals(response.getTotalNoOfWays(), 8);
     }
-
 }
